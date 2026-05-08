@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+
 h1,h2,h3 {
     color: rgb(243, 215, 215); 
 }
@@ -18,6 +19,10 @@ p {
     display: flex;
 }
 
+section {
+    padding-bottom: 50px;
+}
+
 #painel-esquerdo {
     width: 50%;
     min-height: 100vh;
@@ -28,7 +33,6 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
 }
 
 #conteudo {
@@ -63,7 +67,7 @@ p {
 #info .item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .item h1{
@@ -81,6 +85,11 @@ p {
 .item p{
     color:white;
     font-size:13px;
+}
+
+.item i {
+    color: rgba(255, 255, 0, 0.534);
+    font-size: 1.5em;
 }
 
 #painel-direito {

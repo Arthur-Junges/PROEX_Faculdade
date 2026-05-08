@@ -269,13 +269,18 @@ span a{
     color: rgba(255, 217, 0, 0.644);
 }
 @media (max-width: 1024px) {
+   body {
+        background-color: black;
+    }
     #painel-esquerdo {
         display: none;
     }
 
     #painel-direito {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        margin: auto;
+        max-width: 600px;
     }
 
     #nome-site {
@@ -284,5 +289,12 @@ span a{
 
     #bem-vindo {
         text-align: center;
+    }
+    .input-box label {
+        text-align: left;
+    }
+
+    #dados button {
+        max-width: 500px;
     }
 }
