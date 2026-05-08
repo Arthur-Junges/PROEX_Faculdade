@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    border-bottom: 1px solid rgba(196, 149, 31, 0.219);
+}
+
+header #tesoura {
+    background-color: rgb(196, 149, 31);
+    padding: 7px;
+    border-radius: 5px;
+    color: black;
+}
+
+header h2 {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(24, 22, 22, 0.575);
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+}
+
+.user #usericon {
+    background-color:rgba(196, 149, 31, 0.226);
+    padding: 7px;
+    border-radius: 50px;
+    font-size: 10px;
+    color: rgb(196, 149, 31);
+}
+
+.logout {
+    color: gray;
+    background-color: rgb(24, 22, 22);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#um {
+    background: url(./Imagens/Imagem_home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    opacity: 40%;
+    height: 370px;
+    width: 100%;
+}
