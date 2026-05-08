@@ -1,0 +1,301 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1,h2,h3 {
+    color: rgb(243, 215, 215); 
+}
+
+p {
+    color: rgb(196, 149, 31);
+}
+
+#container {
+    display: flex;
+}
+
+#painel-esquerdo {
+    width: 50%;
+    min-height: 100vh;
+    background-image: url(./imagens/Imagem_cadastro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+#conteudo {
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    width: 90%;
+}
+
+#conteudo h1 {
+    font-size: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+#conteudo span {
+    color:rgb(196, 149, 31);;
+}
+
+#conteudo p {
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+#info {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+#info .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item h1{
+    color:rgb(212,175,55);
+    font-size:20px;
+    font-family:'Playfair Display', serif;
+    margin-right: 20px;
+}
+
+.item h1 >span {
+     display: inline-flex;
+    align-items: center;
+}
+
+.item p{
+    color:white;
+    font-size:13px;
+}
+
+#painel-direito {
+    background-color: black;
+    width: 50%;
+    min-height: 100vh;
+
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+
+#nome-site {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+#texto h2 {
+    font-size: 1.3em;
+}
+
+#texto p {
+    font-size: 0.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+
+#nome-site i {
+    padding: 15px;
+    background-color: rgb(196, 149, 31);
+    color: black;
+    border-radius: 5px;
+    font-size: large;
+}
+
+#bem-vindo {
+    margin-bottom: 40px;
+}
+
+#bem-vindo h1 {
+    margin-bottom: 8px;
+    font-size: 1.6em;
+}
+
+#bem-vindo p {
+    color: gray;
+}
+
+.input-box label{
+    color: gray;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+.input-box input {
+    width: 100%;
+    margin: auto;
+    background-color: rgb(14, 13, 13);
+    outline: none;
+    padding: 15px;
+    border-radius: 15px;
+    border: 0.5px solid rgb(40,40,40);;
+    box-shadow: none;
+    color: white;
+    padding-left: 45px;
+}
+
+.input-box input:focus {
+    box-shadow: 0 0 3px rgb(196, 149, 31);
+}
+
+.input-box{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box i{
+    position: absolute;
+
+    left: 18px;
+    top: 37px;
+
+    color: gray;
+}
+
+#dados #esqueceu {
+    color: rgb(196, 149, 31);
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    width: 140px;
+    margin-left: auto;
+}
+
+#dados #esqueceu:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#dados #entrar {
+    width: 100%;
+    background: linear-gradient(90deg, rgb(184,134,11), rgb(255,230,150), rgb(212,175,55));;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.9em;
+    border-style: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#dados #entrar:hover {
+    background: linear-gradient(90deg,rgb(255,240,180),rgb(212,175,55),rgb(120,85,20));
+    background-position:right; 
+    transition: all 0.5s ease;
+    transform:translateY(-3px);
+    box-shadow: rgba(255, 217, 0, 0.644) 1px 1px 10px;
+}
+
+#ou {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+#ou::before{
+    content: "";
+    flex: 1;
+    height: 1px;
+
+    background: linear-gradient(90deg,rgba(212,175,55,0) 0%,rgba(212,175,55,1) 100%);
+}
+
+#ou::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+
+    background: linear-gradient(90deg, rgba(212,175,55,1) 0%,rgba(212,175,55,0) 100%);
+}
+
+#ou span {
+    color: gray;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+#google {
+    width: 100%;
+    background-color: rgb(32, 31, 31);
+    color: white;
+    font-weight: light;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    border-style: none;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#google:hover {
+    opacity: 0.8; 
+    transition: 0.5s;
+}
+
+
+#dados #final {
+    color: gray;
+    text-align: center;
+    font-size: 1.0em;
+}
+
+span a{
+    text-decoration: none;
+    color: rgba(255, 217, 0, 0.644);
+}
+@media (max-width: 1024px) {
+
+    body {
+        background-color: black;
+    }
+    #painel-esquerdo {
+        display: none;
+    }
+
+    #painel-direito {
+        width: 100%;
+        min-height: 100vh;
+        margin: auto;
+        max-width: 600px;
+    }
+
+    #nome-site {
+        justify-content: center;
+    }
+
+    #bem-vindo {
+        text-align: center;
+    }
+    .input-box label {
+        text-align: left;
+    }
+
+    #dados button {
+        max-width: 500px;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main id="container">
+
+        <section id="painel-esquerdo">
+            <div id="conteudo">
+                <h1>Junte-se à<br><span>elite do estilo</span></h1>
+                <p>Crie sua conta e tenha acesso aos melhores profissionais, agendamento fácil e histórico completo.</p>
+                <div id="info">
+                    <div class="item">
+                        <p>Agendamento em menos de 2 minutos</p>
+                        <p>Lembretes automáticos por WhatsApp</p>
+                        <p>Histórico completo de serviços</p>
+                        <p>Avaliações e favoritos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="painel-direito">
+            <div id="nome-site">
+                <i class="fa-solid fa-scissors"></i>
+                <div id="texto">
+                    <h2>BookMe</h2>
+                    <p>AGENDAMENTO PREMIUM</p>
+                </div>
+            </div>
+
+            <div id="bem-vindo">
+                <h1>Criar Conta</h1>
+                <p>Preencha seus dados para começar</p>
+            </div>
+
+            <div id="dados">
+                <div class="input-box">
+                    <label for="inome" >Nome</label><br>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="name" placeholder="Seu nome completo"><br>
+                </div>
+                <div class="input-box">
+                    <label for="iemail" >E-mail</label><br>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="Email" placeholder="seu@email.com"><br>
+                </div>
+                <div class="input-box">
+                    <label for="isenha" >Telefone / Whatsapp</label><br>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="number" id="telefone" placeholder="(11) 99999-9999">
+                </div>
+                <div class="input-box">
+                    <label for="isenha" >Senha</label><br>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="Senha"
+                    minlength="8" placeholder="Mínimo 8 caracteres">
+                </div>
+                <div class="input-box">
+                    <label for="isenha" >Confirmar Senha</label><br>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="Senha-rep" placeholder="Repita a senha">
+                </div>
+
+                <button type="button" id="entrar">Criar Conta</button>
+
+                <p id="final">Já tem uma conta? <span><a href="login.html">Entrar</a></span></p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
