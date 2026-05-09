@@ -120,9 +120,12 @@ header h2 {
 
 @media (max-width: 1000px){
     
+    #conteudo {
+        padding-left: 70px;
+    }
+
     #conteudo h1 {
         font-size: 2.6em;
-        padding-left: 70px;
     }
 
 }
@@ -130,9 +133,12 @@ header h2 {
 
 @media (max-width: 768px){
     
+    #conteudo {
+        padding-left: 50px;
+    }
+
     #conteudo h1 {
         font-size: 2.3em;
-        padding-left: 50px;
     }
 
 }
