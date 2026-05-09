@@ -272,6 +272,7 @@ span a{
    body {
         background-color: black;
     }
+
     #painel-esquerdo {
         display: none;
     }
@@ -281,6 +282,7 @@ span a{
         min-height: 100vh;
         margin: auto;
         max-width: 600px;
+        padding-left: 75px;
     }
 
     #nome-site {
@@ -294,7 +296,95 @@ span a{
         text-align: left;
     }
 
+    .input-box input {
+        min-width: 250px;
+    }
+
     #dados button {
         max-width: 500px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px){
+
+
+    #painel-esquerdo {
+        display: none;
+    }
+
+    #painel-direito{
+        width: 100%;
+        min-height: 100vh;
+
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+    }
+
+    #nome-site{
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    #texto h2{
+        font-size: 1.1em;
+    }
+
+    #texto p{
+        font-size: 0.6em;
+        letter-spacing: 1px;
+    }
+
+    #bem-vindo{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #bem-vindo h1{
+        font-size: 1.4em;
+    }
+
+    #bem-vindo p{
+        font-size: 0.9em;
+    }
+
+    .input-box label{
+        font-size: 0.8em;
+    }
+
+    .input-box input{
+        padding: 14px;
+        padding-left: 42px;
+        font-size: 0.9em;
+    }
+
+    .input-box i{
+        top: 36px;
+        left: 15px;
+        font-size: 0.9em;
+    }
+
+    #dados #esqueceu{
+        font-size: 0.75em;
+    }
+
+    #dados #entrar{
+        padding: 14px;
+        font-size: 0.9em;
+    }
+
+    #google{
+        padding: 14px;
+        font-size: 0.85em;
+    }
+
+    #ou span{
+        font-size: 0.8em;
+    }
+
+    #dados #final{
+        font-size: 0.85em;
+        line-height: 22px;
     }
 }
