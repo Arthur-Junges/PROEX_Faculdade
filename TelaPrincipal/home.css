@@ -119,6 +119,27 @@ header h2 {
     color: white;
 }
 
+#dois {
+    padding-top: 40px;
+}
+
+#dois #opcao { 
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    width: 60%;
+    padding-left: 100px;
+}
+
+#dois p {
+    color: white;
+    background-color: rgb(10, 10, 10);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid rgba(128, 128, 128, 0.253);
+}
+
 
 @media (max-width: 1000px){
     
