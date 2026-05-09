@@ -179,13 +179,18 @@ header h2 {
 
     padding-left: 20px;
     padding-right: 20px;
+    }
+
+    #conteudo input {
+        font-size: small;
+    }
 }
 
 #dois #opcao p{
     flex: 0 0 auto;
 }
 
-}
+
 
 
 @media (max-width: 500px){
@@ -200,6 +205,23 @@ header h2 {
 
     #conteudo h3 {
         font-size: small;
+    }
+
+    #dois #opcao {
+        overflow-x: auto;
+        white-space: nowrap;
+
+        scroll-behavior: smooth;
+
+        padding-left: 30px;
+    }   
+
+    #dois #opcao p{
+        flex: 0 0 auto;
+    }
+
+    #conteudo input {
+        font-size: smaller;
     }
 
 }
