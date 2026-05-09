@@ -59,12 +59,79 @@ header h2 {
     cursor: pointer;
 }
 
-#um {
-    background: url(./Imagens/Imagem_home.png);
+#um  {
+    background:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./Imagens/Imagem_home.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    opacity: 40%;
+    opacity: 100%;
     height: 370px;
     width: 100%;
+    
+}
+
+#conteudo {
+    padding-left: 100px;
+    width: 60%;
+}
+
+#conteudo i {
+    color: rgb(208, 255, 0);
+    
+    padding-top: 30px;
+    
+} 
+
+#conteudo p {
+    color: rgb(208, 255, 0);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+#conteudo h1 {
+    color: white;
+    font-size: 3.0em
+}
+
+#conteudo span {
+    color: rgb(245, 245, 108);
+}
+
+#conteudo  h3 {
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size:medium;
+    width: 90%;
+}
+
+#conteudo input {
+    width: 90%;
+    min-width: 300px;
+    padding: 15px 50px;
+    background-color: rgb(10, 10, 10);
+    margin-top: 30px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid rgba(128, 128, 128, 0.253);
+    border-radius: 15px;
+    font-size: medium;
+}
+
+
+@media (max-width: 1000px){
+    
+    #conteudo h1 {
+        font-size: 2.6em;
+    }
+
+}
+
+
+@media (max-width: 768px){
+    
+    #conteudo h1 {
+        font-size: 2.3em;
+    }
+
 }
