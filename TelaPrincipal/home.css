@@ -127,8 +127,14 @@ header h2 {
     display: flex;
     justify-content: left;
     gap: 10px;
-    width: 60%;
+    width: 100%;
     padding-left: 100px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 #dois p {
@@ -151,6 +157,7 @@ header h2 {
         font-size: 2.6em;
     }
 
+
 }
 
 
@@ -163,6 +170,20 @@ header h2 {
     #conteudo h1 {
         font-size: 2.3em;
     }
+
+    #dois #opcao {
+    overflow-x: auto;
+    white-space: nowrap;
+
+    scroll-behavior: smooth;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#dois #opcao p{
+    flex: 0 0 auto;
+}
 
 }
 
