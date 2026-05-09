@@ -89,7 +89,8 @@ header h2 {
 
 #conteudo h1 {
     color: white;
-    font-size: 3.0em
+    font-size: 3.0em;
+    width: 100%;
 }
 
 #conteudo span {
@@ -101,11 +102,11 @@ header h2 {
     font-weight: lighter;
     letter-spacing: 1px;
     font-size:medium;
-    width: 90%;
+    width: 100%;
 }
 
 #conteudo input {
-    width: 90%;
+    width: 60%;
     min-width: 300px;
     padding: 15px 50px;
     background-color: rgb(10, 10, 10);
@@ -139,6 +140,23 @@ header h2 {
 
     #conteudo h1 {
         font-size: 2.3em;
+    }
+
+}
+
+
+@media (max-width: 500px){
+    
+    #conteudo {
+        padding-left: 30px;
+    }
+
+    #conteudo h1 {
+        font-size: 1.9em;
+    }
+
+    #conteudo h3 {
+        font-size: small;
     }
 
 }
