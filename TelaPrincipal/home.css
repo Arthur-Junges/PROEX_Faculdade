@@ -146,6 +146,101 @@ header h2 {
     border: 1px solid rgba(128, 128, 128, 0.253);
 }
 
+#tres h1 {
+    color: white;
+    font-size:1.5em;
+    padding-left:100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#caixa-empresa{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.empresas{
+    width: 380px;
+    background: #0c0c0c;
+    border: 1px solid #1d1d1d;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .3s;
+    margin: auto;
+}
+
+.empresas:hover{
+    transform: translateY(-5px);
+    border-color: #d89a2d;
+}
+
+.imagem{
+    height: 180px;
+    background: #000;
+    position: relative;
+}
+
+.categoria{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    padding: 6px 12px;
+    border: 1px solid #d89a2d;
+    border-radius: 8px;
+
+    color: #d89a2d;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.conteudo{
+    padding: 20px;
+}
+
+.conteudo h2{
+    margin-bottom: 10px;
+}
+
+.conteudo p{
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.tags{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tags span{
+    padding: 6px 10px;
+    border: 1px solid #d89a2d;
+    border-radius: 8px;
+    color: #d89a2d;
+    font-size: 13px;
+}
+
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+}
+
+.rodape span{
+    color: #999;
+}
+
+.rodape a{
+    text-decoration: none;
+    color: #d89a2d;
+    font-weight: bold;
+}
+
 
 @media (max-width: 1000px){
     
@@ -160,6 +255,11 @@ header h2 {
 
 }
 
+@media (max-width: 768px){
+    .empresas{
+        width:90%
+    }
+}
 
 @media (max-width: 768px){
     
@@ -184,6 +284,12 @@ header h2 {
     #conteudo input {
         font-size: small;
     }
+
+    #tres h1 {
+        padding-left:25px;
+    }
+
+   
 }
 
 #dois #opcao p{
@@ -223,5 +329,5 @@ header h2 {
     #conteudo input {
         font-size: smaller;
     }
-
+    
 }
