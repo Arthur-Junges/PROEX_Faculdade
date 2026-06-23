@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendar horário - Salão Beleza Pura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar">
+    <button class="back-btn" id="backBtn" aria-label="Voltar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <div class="topbar-text">
+      <h1>Agendar horário</h1>
+      <p>Salão Beleza Pura</p>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- ===================== CARD DO SALÃO ===================== -->
+    <section class="salon-card">
+      <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=200&auto=format&fit=crop" alt="Salão Beleza Pura" class="salon-img">
+      <div class="salon-info">
+        <h2>Salão Beleza Pura</h2>
+        <div class="salon-rating">
+          <span class="star">★</span> 4.7 <span class="reviews">(189 avaliações)</span>
+        </div>
+        <div class="salon-meta">
+          <span class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Av. Paulista, 890, Bela Vista
+          </span>
+          <span class="meta-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Seg–Dom: 8h–21h
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STEPPER ===================== -->
+    <nav class="stepper" id="stepper">
+      <div class="step" data-step="1">
+        <div class="step-circle">1</div>
+        <span class="step-label">Serviço</span>
+      </div>
+      <div class="step-line" data-line="1"></div>
+      <div class="step" data-step="2">
+        <div class="step-circle">2</div>
+        <span class="step-label">Profissional</span>
+      </div>
+      <div class="step-line" data-line="2"></div>
+      <div class="step" data-step="3">
+        <div class="step-circle">3</div>
+        <span class="step-label">Data &amp; Hora</span>
+      </div>
+    </nav>
+
+    <!-- ===================== STEP 1: SERVIÇO ===================== -->
+    <section class="step-panel" id="panel-1">
+      <h3 class="panel-title">Escolha o serviço</h3>
+
+      <div class="option-list" id="serviceList">
+        <label class="option-card" data-id="escova">
+          <input type="radio" name="service" value="escova">
+          <span class="radio-dot"></span>
+          <span class="option-main">
+            <span class="option-name">Escova Progressiva</span>
+            <span class="option-desc">Alisamento com produtos de alta qualidade</span>
+            <span class="option-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              120 min
+            </span>
+          </span>
+          <span class="option-price">R$ 180</span>
+        </label>
+
+        <label class="option-card" data-id="coloracao">
+          <input type="radio" name="service" value="coloracao">
+          <span class="radio-dot"></span>
+          <span class="option-main">
+            <span class="option-name">Coloração Completa</span>
+            <span class="option-desc">Coloração com tinta premium</span>
+            <span class="option-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              90 min
+            </span>
+          </span>
+          <span class="option-price">R$ 150</span>
+        </label>
+
+        <label class="option-card" data-id="corte">
+          <input type="radio" name="service" value="corte">
+          <span class="radio-dot"></span>
+          <span class="option-main">
+            <span class="option-name">Corte Feminino</span>
+            <span class="option-desc">Corte personalizado com finalização</span>
+            <span class="option-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              60 min
+            </span>
+          </span>
+          <span class="option-price">R$ 80</span>
+        </label>
+
+        <label class="option-card" data-id="manicure">
+          <input type="radio" name="service" value="manicure">
+          <span class="radio-dot"></span>
+          <span class="option-main">
+            <span class="option-name">Manicure + Pedicure</span>
+            <span class="option-desc">Cuidado completo das unhas</span>
+            <span class="option-time">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              90 min
+            </span>
+          </span>
+          <span class="option-price">R$ 70</span>
+        </label>
+      </div>
+
+      <div class="nav-buttons single">
+        <button class="btn btn-primary" id="toStep2" disabled>PRÓXIMO
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== STEP 2: PROFISSIONAL ===================== -->
+    <section class="step-panel hidden" id="panel-2">
+      <h3 class="panel-title">Escolha o profissional</h3>
+
+      <div class="pro-grid" id="proList">
+        <label class="pro-card" data-id="ana">
+          <input type="radio" name="pro" value="ana">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=120&auto=format&fit=crop" alt="Ana Lima" class="pro-avatar">
+          <span class="pro-info">
+            <span class="pro-name">Ana Lima</span>
+            <span class="pro-role">Cabeleireira Senior</span>
+            <span class="pro-rating"><span class="star">★</span> 4.9</span>
+          </span>
+        </label>
+
+        <label class="pro-card" data-id="juliana">
+          <input type="radio" name="pro" value="juliana">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=120&auto=format&fit=crop" alt="Juliana Costa" class="pro-avatar">
+          <span class="pro-info">
+            <span class="pro-name">Juliana Costa</span>
+            <span class="pro-role">Colorista</span>
+            <span class="pro-rating"><span class="star">★</span> 4.7</span>
+          </span>
+        </label>
+      </div>
+
+      <div class="summary-box" id="summary2">
+        <span class="summary-label">RESUMO</span>
+        <p class="summary-line"><span class="summary-key">Serviço:</span> <span id="sumServiceName2">—</span> · <span id="sumServicePrice2">—</span></p>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" data-back="1">Voltar</button>
+        <button class="btn btn-primary" id="toStep3" disabled>PRÓXIMO
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== STEP 3: DATA & HORA ===================== -->
+    <section class="step-panel hidden" id="panel-3">
+      <h3 class="panel-title">Escolha a data e horário</h3>
+
+      <div class="calendar-card">
+        <div class="calendar-header">
+          <button class="cal-nav" id="prevMonth" aria-label="Mês anterior">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <span class="cal-month" id="calMonthLabel">Junho 2026</span>
+          <button class="cal-nav" id="nextMonth" aria-label="Próximo mês">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+
+        <div class="cal-weekdays">
+          <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+        </div>
+
+        <div class="cal-grid" id="calGrid"></div>
+
+        <div class="time-slots hidden" id="timeSlots">
+          <span class="summary-label">HORÁRIOS DISPONÍVEIS</span>
+          <div class="slots-grid" id="slotsGrid"></div>
+        </div>
+      </div>
+
+      <div class="summary-box" id="summary3">
+        <span class="summary-label">RESUMO</span>
+        <p class="summary-line">
+          <span><span class="summary-key">Serviço:</span> <span id="sumServiceName3">—</span> · <span id="sumServicePrice3">—</span></span>
+          <span><span class="summary-key">Profissional:</span> <span id="sumProName3">—</span></span>
+        </p>
+      </div>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" data-back="2">Voltar</button>
+        <button class="btn btn-primary" id="toPayment" disabled>IR PARA PAGAMENTO
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

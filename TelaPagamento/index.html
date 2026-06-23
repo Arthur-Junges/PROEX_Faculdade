@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagamento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="topbar">
+    <button class="back-btn" id="backBtn" aria-label="Voltar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <div class="topbar-text">
+      <h1>Pagamento</h1>
+      <p><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Pagamento seguro e criptografado</p>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- ===================== RESUMO DO AGENDAMENTO ===================== -->
+    <section class="summary-card">
+      <span class="summary-title">RESUMO DO AGENDAMENTO</span>
+
+      <div class="summary-rows">
+        <div class="summary-row">
+          <span class="row-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48L20 20M8.12 8.12 12 12"/></svg>
+            Hidratação Capilar
+          </span>
+          <span class="row-value price">R$ 55.00</span>
+        </div>
+        <div class="summary-row">
+          <span class="row-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Carlos Mendes
+          </span>
+          <span class="row-value time">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            40 min
+          </span>
+        </div>
+        <div class="summary-row">
+          <span class="row-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            24 de jun de 2026 às 17:30
+          </span>
+        </div>
+      </div>
+
+      <div class="summary-divider"></div>
+
+      <div class="summary-row fee-row">
+        <span class="row-label-plain">Taxa de serviço</span>
+        <span class="row-value-plain">R$ 2.99</span>
+      </div>
+
+      <div class="total-row">
+        <span class="total-label">Total</span>
+        <span class="total-value">R$ 57.99</span>
+      </div>
+    </section>
+
+    <!-- ===================== FORMA DE PAGAMENTO ===================== -->
+    <section class="payment-method-section">
+      <span class="section-label">FORMA DE PAGAMENTO</span>
+
+      <div class="method-grid" id="methodGrid">
+        <button type="button" class="method-card selected" data-method="credito">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          <span>Crédito</span>
+        </button>
+        <button type="button" class="method-card" data-method="debito">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          <span>Débito</span>
+        </button>
+        <button type="button" class="method-card" data-method="pix">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 12l10 10 10-10L12 2z"/></svg>
+          <span>PIX</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===================== FORMULÁRIO CARTÃO (CRÉDITO/DÉBITO) ===================== -->
+    <section class="card-section" id="cardSection">
+
+      <div class="credit-card" id="creditCard">
+        <div class="card-glow"></div>
+        <div class="card-top">
+          <div class="card-chip"></div>
+          <span class="card-brand" id="cardBrand">CRÉDITO</span>
+        </div>
+        <div class="card-number" id="cardNumberDisplay">0000 0000 0000 0000</div>
+        <div class="card-bottom">
+          <div class="card-field">
+            <span class="card-field-label">Titular</span>
+            <span class="card-field-value" id="cardNameDisplay">NOME DO TITULAR</span>
+          </div>
+          <div class="card-field align-right">
+            <span class="card-field-label">Validade</span>
+            <span class="card-field-value" id="cardExpiryDisplay">MM/AA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cardNumber">NÚMERO DO CARTÃO</label>
+        <input type="text" id="cardNumber" class="form-input" placeholder="0000 0000 0000 0000" inputmode="numeric" maxlength="19">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="cardName">NOME DO TITULAR</label>
+        <input type="text" id="cardName" class="form-input" placeholder="COMO ESTÁ NO CARTÃO">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="cardExpiry">VALIDADE</label>
+          <input type="text" id="cardExpiry" class="form-input" placeholder="MM/AA" inputmode="numeric" maxlength="5">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cardCvv">CVV</label>
+          <input type="text" id="cardCvv" class="form-input" placeholder="•••" inputmode="numeric" maxlength="4">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="installments">PARCELAS</label>
+        <div class="select-wrap">
+          <select id="installments" class="form-select"></select>
+          <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PIX ===================== -->
+    <section class="pix-section hidden" id="pixSection">
+      <div class="pix-card">
+        <div class="pix-qr">
+          <svg viewBox="0 0 100 100" width="180" height="180" id="pixQr">
+            <!-- QR gerado via JS -->
+          </svg>
+        </div>
+        <p class="pix-instructions">Abra o app do seu banco, escaneie o código ou copie a chave abaixo</p>
+
+        <div class="pix-key-box">
+          <span class="pix-key" id="pixKey">00020126580014BR.GOV.BCB.PIX...57.99</span>
+          <button type="button" class="pix-copy-btn" id="pixCopyBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar
+          </button>
+        </div>
+
+        <div class="pix-timer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Expira em <span id="pixTimer">09:59</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SELOS DE SEGURANÇA ===================== -->
+    <div class="security-badges" id="securityBadges">
+      <span class="badge-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 7v6c0 5 4 8 9 9 5-1 9-4 9-9V7l-9-5z"/></svg>
+        SSL 256-bit
+      </span>
+      <span class="badge-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Dados criptografados
+      </span>
+      <span class="badge-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        PCI DSS
+      </span>
+    </div>
+
+    <!-- ===================== BOTÃO PAGAR ===================== -->
+    <button type="button" class="btn-pay" id="payBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span id="payBtnLabel">PAGAR R$ 57.99</span>
+    </button>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
